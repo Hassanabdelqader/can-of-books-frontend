@@ -7,6 +7,7 @@ class BestBooks extends React.Component {
     this.state = {
       books: []
     }
+    const count = 0;
     
   }
 
