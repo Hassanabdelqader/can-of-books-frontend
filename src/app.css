@@ -1,0 +1,9 @@
+.nav-item{
+    color: white !important;
+    padding-right: 1rem !important;
+}
+
+.loginbtn {
+    position: absolute;
+    right: 1em;
+}
