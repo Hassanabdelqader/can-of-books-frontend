@@ -1,4 +1,7 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';   
+import axios from 'axios';
+import Carousel from './Components/Carousel';
 
 
 class BestBooks extends React.Component {
@@ -11,8 +14,18 @@ class BestBooks extends React.Component {
     
   }
 
+  getBooks = async () => {
+    const res = await axios.get('http://localhost:3001/book');
+    this.setState({ books: res.data });
+    console.log(this.state.books);
+  }
 
   /* TODO: Make a GET request to your API to fetch all the books from the database  */
+
+  componentDidMount() {
+    console.log("inside the componentDidMount");
+   this.getBooks();
+  }
 
   render() {
 
@@ -23,7 +36,7 @@ class BestBooks extends React.Component {
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
 
         {this.state.books.length ? (
-          <p>Book Carousel coming soon</p>
+          <Carousel data={this.state.books}/>
         ) : (
           <h3>No Books Found :(</h3>
         )}
