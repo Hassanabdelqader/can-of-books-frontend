@@ -7,7 +7,7 @@ class Profile extends Component {
     return (
       <>
       <h1>Hasan Mousa</h1>
-      <p>Profile page coming soon</p>
+      <p>Full Stack Developer </p>
       </>
       )
     }
