@@ -22,8 +22,8 @@ function ControlledCarousel(props) {
           height={'600px'}
         />
         <Carousel.Caption>
-          <h3>{props.data[1].title}</h3>
-          <p>{props.data[1].description}</p>
+          <h3>{props.data[1]?.title}</h3>
+          <p>{props.data[1]?.description}</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -35,8 +35,8 @@ function ControlledCarousel(props) {
         />
 
         <Carousel.Caption>
-          <h3>{props.data[2].title}</h3>
-          <p>{props.data[2].description}</p>
+          <h3>{props.data[2]?.title}</h3>
+          <p>{props.data[2]?.description}</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -48,9 +48,9 @@ function ControlledCarousel(props) {
         />
 
         <Carousel.Caption>
-          <h3>{props.data[0].title}</h3>
+          <h3>{props.data[0]?.title}</h3>
           <p>
-            {props.data[0].description}
+            {props.data[0]?.description}
               </p>
         </Carousel.Caption>
       </Carousel.Item>
